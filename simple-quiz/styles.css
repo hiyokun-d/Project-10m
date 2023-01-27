@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 2px;
+    padding: 2px;
+    background-color: rgb(58, 58, 59);
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    color: rgb(219, 219, 219);
+}
+
+.answers-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+}
+
+.answers {
+    margin-top: 30px;
+    background-color: rgb(159, 189, 248);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(70, 69, 69);
+    transition: box-shadow 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform .2s cubic-bezier(0.68, -0.55, 0.265, 1.55), color .5s cubic-bezier(0.165, 0.84, 0.44, 1), background-color .5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.answers:hover {
+    box-shadow: inset 0px 0px 10px red;
+    transform: scale(1.2);
+    background-color: rgb(47, 53, 65);
+    color: rgb(255, 255, 255);
+}
+
+.answers:first-child:hover {
+    transform: scale(1.2) translateX(10px);
+}
+
+.answers:last-child:hover {
+    transform: scale(1.2) translateX(-20px);
+}
+
+.answers:active {
+    box-shadow: inset 0px 0px 10px red;
+    transform: scale(1);
+    background-color: rgb(47, 53, 65);
+    color: rgb(255, 255, 255);
+}
+
+.answers:first-child:active {
+    transform: scale(1)
+}
+
+.answers:last-child:active {
+    transform: scale(1) 
+}
+
+.answers:not(:last-child) {
+    margin-right: 10px;
+}
+
+.answers.correct {
+    background-color: rgb(210, 252, 146);
+}
+
+.answers.incorrect {
+    background-color: rgb(243, 98, 98);
+}
